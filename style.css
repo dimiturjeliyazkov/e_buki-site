@@ -10,6 +10,8 @@ body {
     background-color: #eaeaea;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
 }
 
 header {
@@ -17,32 +19,46 @@ header {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    flex: 1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin-bottom: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f1f1f1;
+    background-color: #444;
 }
 
 main {
+    margin-left: 220px; /* За да оставим място за фиксираната навигация */
     padding: 3rem 2rem;
+    flex: 1;
 }
 
 .intro {
@@ -101,8 +117,4 @@ footer {
     background-color: #333;
     color: white;
     margin-top: 3rem;
-}
-
-footer p {
-    font-size: 1rem;
 }
